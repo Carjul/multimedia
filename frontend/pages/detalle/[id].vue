@@ -71,7 +71,7 @@
     };
 
     function mostrarFile(filename) {
-        return `http://localhost:8000/multimedia/vista/${filename}`;
+        return `https://multimedia-xx0i.onrender.com/multimedia/vista/${filename}`;
     }
 
     onBeforeUnmount(() => {
@@ -84,7 +84,7 @@
     });
 
     watch(() => store.documento, async (newItems) => {
-        console.log('Nuevo ítem:', newItems);
+        console.log('Nuevo item:', newItems);
         if (newItems.type !== 'document' || newItems.file.mimetype === 'application/pdf') {
             newItems.image = mostrarFile(newItems.file.filename);
         } else if (newItems.file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {

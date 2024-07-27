@@ -36,7 +36,7 @@ export const useMultimediaStore = defineStore('Documentos', {
           formData.append('category', category);
           formData.append('type', type);
         try {
-           await axios.post('http://localhost:8000/multimedia/carga', formData, {
+           await axios.post('https://multimedia-xx0i.onrender.com/multimedia/carga', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }
@@ -48,7 +48,7 @@ export const useMultimediaStore = defineStore('Documentos', {
       },
       async setUpdateMultimedia(id:string, description:string){
         try {
-          await axios.patch(`http://localhost:8000/multimedia/${id}`, {
+          await axios.patch(`https://multimedia-xx0i.onrender.com/multimedia/${id}`, {
             description: description
           });
           this.setMultimedia(id);
@@ -58,7 +58,7 @@ export const useMultimediaStore = defineStore('Documentos', {
       },
    async  setMultimedias(){
         try {
-            const response = await axios.get('http://localhost:8000/multimedia');
+            const response = await axios.get('https://multimedia-xx0i.onrender.com/multimedia');
           this.documentos= response.data;
         } catch (error) {
           console.error('Error fetching multimedia items:', error);
@@ -67,7 +67,7 @@ export const useMultimediaStore = defineStore('Documentos', {
    async setDeleteMultimedia(id:string) {
     
     try {
-        await axios.delete(`http://localhost:8000/multimedia/${id}`);
+        await axios.delete(`https://multimedia-xx0i.onrender.com/multimedia/${id}`);
         this.setMultimedias();
     } catch (error) {
         console.error('Error deleting multimedia item:', error);
@@ -75,7 +75,7 @@ export const useMultimediaStore = defineStore('Documentos', {
       },
    async setMultimedia(id:string) {
     try{
-        const response = await axios.get(`http://localhost:8000/multimedia/${id}`);
+        const response = await axios.get(`https://multimedia-xx0i.onrender.com/multimedia/${id}`);
         this.documento= response.data;
     }catch(error){
         console.error('Error fetching multimedia item:', error);

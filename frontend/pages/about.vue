@@ -26,12 +26,8 @@
     import { ref } from 'vue';
 
     const people = ref([
-        { nombre: 'Angel Antonio Solar Esalas', image: 'https://robohash.org/4' },
-        { nombre: 'Katerine Paola Calao Polo', image: 'https://robohash.org/1' },
-        { nombre: 'Elkin Ricardo Lopez Castillo', image: 'https://robohash.org/400' },
-        { nombre: 'Aldair Delgado Sanchez', image: 'https://robohash.org/6' },
-        { nombre: 'Michael Steven Barrios Martinez', image: 'https://robohash.org/9' },
-        { nombre: 'Jose Julian Diaz Colin', image: 'https://robohash.org/8' },
-        { nombre: 'Valentina Sierra Gloria', image: 'https://robohash.org/7' },
+    
+        { nombre: 'Carlos Julián Ramos González', image: 'https://robohash.org/400' },
+  
     ]);
 </script>
